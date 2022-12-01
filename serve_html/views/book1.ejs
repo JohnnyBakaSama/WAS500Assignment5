@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    body {
+      font-family: "Times New Roman", times, serif;
+    }
+    
+    .navpane {
+      height: 100%;
+      width: 180px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 10px;
+    }
+    
+    .navpane a {
+      padding: 6px 8px 6px 4px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #f11212;
+      display: block;
+    } 
+    .maincontainer {
+      margin-left: 220px; 
+      font-size: 30px; 
+      padding: 0px 0px;
+    }
+
+    aside {
+  width: 30;
+  padding-left: 55px;
+  margin-left: 55px;
+  float: left;
+  font-size: 28px;
+    }
+    
+    </style>
+    </head>
+    <body>
+    
+    <%- include('partials/navpanel') %>
+
+    <div class="maincontainer">
+      <h2 style="color:red">SENECA LIBRARY</h2>
+        <header>
+      <h2>Book Information</h2>
+        </header>
+        <article>
+      <div style="display:block;text-align:left">
+      <img src="<%= bookmodel.bookimage %>"
+      alt="Book Cover of To Kill A MockinBird"
+      width="400"
+      height="500"
+      align="left">
+     </div>
+     <br></br>
+     <aside>
+   
+            <h1>
+              Book Title:<%= bookmodel.name %>
+            </h1>
+            <p><strong>Author:<%= bookmodel.authorname %> <br> <%= bookmodel.description %></strong>
+            </p>
+        </div>
+            </aside>
+            </article>
+    </section>
+    </div>
+       
+    </body>
+    </html> 
+</html>
